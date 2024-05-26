@@ -121,7 +121,7 @@ class Dashboard(Frame):
         total_offense = db_controller.get_total_amount_offense()
         self.canvas.itemconfigure(self.total_offense, text=total_offense)
         self.canvas.itemconfigure(self.total_offense_month, text=total_offense + 200)
-        self.canvas.itemconfigure(self.total_offense_total, text=total_offense +197)
+        self.canvas.itemconfigure(self.total_offense_total, text= 200)
 
     def update_graph(self, total_offense):
         self.ax.clear()

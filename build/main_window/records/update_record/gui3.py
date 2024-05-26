@@ -92,7 +92,7 @@ class updateRecord(Frame):
             image=self.button_image_1,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: print("button_1 clicked"),
+            command=self.handle_update,
             relief="flat"
         )
         button_1.place(
@@ -643,7 +643,7 @@ class updateRecord(Frame):
 
 
     def handle_update(self):
-        result = db_controller.update_record_all(
+        result = db_controller.update_record(
             self.selected_r_id,
             d_name=self.data["d_name"].get(),
             d_license=self.data["d_license"].get(),
